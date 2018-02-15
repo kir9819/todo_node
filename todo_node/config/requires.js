@@ -1,5 +1,6 @@
 module.exports =  {
     Koa: require('koa'), // core
+    cors: require('koa-cors'), // cors
     Router: require('koa-router'), // routing
     bodyParser: require('koa-bodyparser'), // POST parser
     serve: require('koa-static'), // serves static files like index.html
@@ -14,4 +15,5 @@ module.exports =  {
     crypto: require('crypto'), // crypto module for node.js for e.g. creating hashes
     path: require('path'),
     jwtsecret: "mysecretkey"
+    
 };

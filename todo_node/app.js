@@ -5,9 +5,11 @@ const requires       = require('./config/requires');
 
 const app = new requires.Koa();
 const router = new requires.Router();
+
 // middleware для обработки данных 
 
-app.use(requires.serve('public')) // static files located in `public` folder
+app.use(requires.cors({origin: '*'}))
+    .use(requires.serve('public')) // static files located in `public` folder
     .use(requires.logger())
     .use(requires.bodyParser())
     .use(requires.passport.initialize()) // initialize passport first
